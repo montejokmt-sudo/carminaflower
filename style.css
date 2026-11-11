@@ -1,0 +1,213 @@
+/* ==============================
+   INTERACTIVE FLOWER GARDEN
+============================== */
+
+.flower-garden-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f5, #ffe0eb);
+    overflow: hidden;
+}
+
+.garden-heading span {
+    color: #c04b78;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.garden-heading h2 {
+    color: #7b2949;
+    font-size: 35px;
+    margin: 15px 0;
+}
+
+.garden-heading p {
+    color: #80566a;
+    margin-bottom: 35px;
+}
+
+.interactive-garden {
+    position: relative;
+    max-width: 850px;
+    height: 430px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 25px;
+    background:
+        radial-gradient(circle at 50% 20%, #fff7fa, transparent 55%),
+        linear-gradient(135deg, #f9c9dc, #f6e1eb);
+    box-shadow: 0 10px 30px rgba(140, 50, 90, 0.18);
+}
+
+/* FLOWER BUTTONS */
+
+.garden-flower {
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    background: rgba(255,255,255,.75);
+    cursor: pointer;
+    font-size: 42px;
+    box-shadow: 0 5px 15px rgba(150, 60, 100, .15);
+    transition: .3s;
+    animation: flowerFloat 3s ease-in-out infinite;
+}
+
+.garden-flower span {
+    display: block;
+    font-size: 13px;
+    color: #80324f;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.garden-flower:hover {
+    transform: scale(1.2) rotate(8deg);
+    background: white;
+    box-shadow: 0 0 25px #ff9fc5;
+}
+
+.rose {
+    top: 45px;
+    left: 12%;
+}
+
+.sunflower {
+    top: 65px;
+    right: 13%;
+    animation-delay: .5s;
+}
+
+.tulip {
+    bottom: 85px;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.cherry {
+    bottom: 70px;
+    right: 12%;
+    animation-delay: 1.5s;
+}
+
+.white {
+    top: 160px;
+    left: 43%;
+    animation-delay: .8s;
+}
+
+@keyframes flowerFloat {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -12px;
+    }
+}
+
+/* MESSAGE CARD */
+
+.garden-message {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    max-width: 75%;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.88);
+    box-shadow: 0 8px 25px rgba(130, 50, 80, .15);
+    pointer-events: none;
+}
+
+.garden-message span {
+    font-size: 35px;
+}
+
+.garden-message h3 {
+    color: #a83f69;
+    margin: 8px 0;
+}
+
+.garden-message p {
+    color: #765363;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* GRASS */
+
+.garden-grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(#9fc77c, #6eaa62);
+    border-radius: 0 0 25px 25px;
+    z-index: 1;
+}
+
+.garden-footer {
+    margin-top: 25px;
+    color: #a3476c;
+    font-style: italic;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .garden-heading h2 {
+        font-size: 25px;
+    }
+
+    .interactive-garden {
+        height: 500px;
+    }
+
+    .garden-flower {
+        width: 75px;
+        height: 75px;
+        font-size: 30px;
+    }
+
+    .garden-flower span {
+        font-size: 11px;
+    }
+
+    .rose {
+        top: 35px;
+        left: 5%;
+    }
+
+    .sunflower {
+        top: 35px;
+        right: 5%;
+    }
+
+    .tulip {
+        bottom: 65px;
+        left: 5%;
+    }
+
+    .cherry {
+        bottom: 65px;
+        right: 5%;
+    }
+
+    .white {
+        top: 190px;
+        left: 39%;
+    }
+
+    .garden-message {
+        width: 210px;
+        padding: 12px;
+    }
+}
